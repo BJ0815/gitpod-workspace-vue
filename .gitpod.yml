@@ -1,0 +1,18 @@
+github:
+  prebuilds:
+    pullRequestsFromForks: true
+    addComment: true
+    
+image: 
+  file: .gitpod.Dockerfile
+
+# tasks:
+#   - init: ${GITPOD_REPO_ROOT}/utils/init-script.sh
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
