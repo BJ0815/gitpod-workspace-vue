@@ -4,7 +4,7 @@ const app = express()
 const port = 8080
 
 /* your app config here */
-app.use('/demo', express.static(path.resolve(__dirname, '../vue-project/dist')))
+app.use('/', express.static(path.resolve(__dirname, '../vue-project/dist')))
 
 app.get('/', (req, res) => {
   res.send('Hello World!')

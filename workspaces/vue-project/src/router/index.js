@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import { getDynamicBase } from './dynamic-base.helper'
 
 const getBase = (clientOnlyDynamicBase) => {
+  // return import.meta.env.BASE_URL
   return clientOnlyDynamicBase(window.location.pathname)
 }
 
