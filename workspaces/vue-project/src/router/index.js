@@ -1,16 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
-const getDynamicBase = (uri) => {
-  const regx = /^(\/\w+)(\/\d{8})?/
-  const matchs = uri.match(regx)
-  if (matchs) {
-    const [ match ] = matchs
-    return match
-  }
-
-  return uri
-}
+import { getDynamicBase } from './dynamic-base.helper'
 
 const getBase = (clientOnlyDynamicBase) => {
   return clientOnlyDynamicBase(window.location.pathname)
